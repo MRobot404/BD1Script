@@ -143,7 +143,8 @@ create table CLIENTE (
    IDPERSONA            INTEGER,
    ID_TIPO_USUARIO      INTEGER,
    FECHA_ALTA           DATE,
-   USUARIO_CLIENTE      VARCHAR2(30),
+   USUARIO              VARCHAR2(30),
+   CONTRASENA           VARCHAR2(30),
    constraint PK_CLIENTE primary key (IDCLIENTE)
 );
 
