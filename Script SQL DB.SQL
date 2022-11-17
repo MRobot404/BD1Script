@@ -299,7 +299,6 @@ alter table INMUEBLE
 create table CATEGORIAS (
    IDCATEGORIA          INTEGER               not null,
    IDESTADO_INMUEBLE    INTEGER,
-   IDINMUEBLE           INTEGER,
    NOMBRE_CATEGORIA     VARCHAR2(50)          not null,
    constraint PK_CATEGORIAS primary key (IDCATEGORIA)
 );
@@ -318,7 +317,6 @@ alter table CATEGORIAS
 
 create table ESTADO (
    IDESTADO_INMUEBLE    INTEGER               not null,
-   IDINMUEBLE           INTEGER,
    DISPONIBILIDAD       SMALLINT              not null,
    constraint PK_ESTADO primary key (IDESTADO_INMUEBLE)
 );
