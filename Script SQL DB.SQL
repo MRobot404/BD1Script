@@ -42,7 +42,7 @@ create table EMPLEADO (
    IDPERSONA            INTEGER,
    FECHA_INGRESO        DATE,
    FECHA_EGRESO         DATE,
-   USUARIO_EMPLEADO     VARCHAR2(30),
+   USUARIO              VARCHAR2(30),
    CONTRASENA           VARCHAR2(30),
    constraint PK_EMPLEADO primary key (ID_EMPLEADO)
 );

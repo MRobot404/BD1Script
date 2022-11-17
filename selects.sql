@@ -5,5 +5,6 @@ select * from rol_tipo_usuario;
 select * from rol;
 select * from cliente;  
 select * from inmueble;
-select* from correo;
+select * from correo;
 select * from telefono;
+select * from empleado;
