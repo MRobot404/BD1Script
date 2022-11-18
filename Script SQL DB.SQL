@@ -373,7 +373,7 @@ alter table ZONA_GEOGRAFICA
 create table MUNICIPIO (
    ID_MUNICIPIO         INTEGER               not null,
    ID_DEPARTAMENTO      INTEGER,
-   MUNICIPIO            CHAR(10),
+   MUNICIPIO            VARCHAR(100),
    constraint PK_MUNICIPIO primary key (ID_MUNICIPIO)
 );
 

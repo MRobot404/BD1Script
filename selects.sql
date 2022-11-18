@@ -15,3 +15,7 @@ select * from categorias;
 select * from departamento;
 select * from municipio;
 select * from zona;
+select * from aldeas_caserio;
+select * from zona_geografica;
+select * from colonia;
+select * from inmueble;
