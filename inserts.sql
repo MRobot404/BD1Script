@@ -16,4 +16,5 @@ insert into categorias(nombre_categoria) values ('Casa');
 insert into categorias(nombre_categoria) values ('Casa 2 niveles');
 insert into categorias(nombre_categoria) values ('local');
 insert into categorias(nombre_categoria) values ('oficina');
-insert into
+insert into departamento(departamento) values ('Guatemala');
+insert into zona (zona) values ('zona 12');

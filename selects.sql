@@ -13,3 +13,5 @@ select * from documento_persona;
 select * from estado;
 select * from categorias;
 select * from departamento;
+select * from municipio;
+select * from zona;
