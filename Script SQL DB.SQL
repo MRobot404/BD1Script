@@ -268,6 +268,7 @@ create table INMUEBLE (
    IDCATEGORIA          INTEGER,
    CAT_IDCATEGORIA      INTEGER,
    EST_IDESTADO_INMUEBLE INTEGER,
+   ID_DEPARTAMENTO      INTEGER,
    NOMBRE_INMUEBLE      VARCHAR2(50)          not null,
    DESCRIPCION          VARCHAR2(50),
    CAPACIDAD            NUMBER,
@@ -294,53 +295,36 @@ alter table INMUEBLE
    add constraint FK_INMUEBLE_RELATIONS_CATEGORI foreign key (CAT_IDCATEGORIA)
       references CATEGORIAS (IDCATEGORIA);
 
+alter table INMUEBLE
+    add constraint FK__INMUEBLE_DEPARTAMENTO foreign key (ID_DEPARTAMENTO)
+    references DEPARTAMENTO (ID_DEPARTAMENTO);
+
 
 
 create table CATEGORIAS (
    IDCATEGORIA          INTEGER               not null,
-   IDESTADO_INMUEBLE    INTEGER,
    NOMBRE_CATEGORIA     VARCHAR2(50)          not null,
+   constraint CHCATEGORIA CHECK(NOMBRE_CATEGORIA IN('Apartamento','Casa','Casa 2 niveles','local','oficina')),
    constraint PK_CATEGORIAS primary key (IDCATEGORIA)
 );
 
 
 
 
-alter table CATEGORIAS
-   add constraint FK_CATEGORI_RELATIONS_INMUEBLE foreign key (IDINMUEBLE)
-      references INMUEBLE (IDINMUEBLE);
-
-alter table CATEGORIAS
-   add constraint FK_CATEGORI_RELATIONS_ESTADO foreign key (IDESTADO_INMUEBLE)
-      references ESTADO (IDESTADO_INMUEBLE);
-
 
 create table ESTADO (
    IDESTADO_INMUEBLE    INTEGER               not null,
-   DISPONIBILIDAD       SMALLINT              not null,
+   DISPONIBILIDAD       VARCHAR(100)              not null,
+    constraint CHESTADO CHECK(DISPONIBILIDAD IN('Disponible','Reservado')),
    constraint PK_ESTADO primary key (IDESTADO_INMUEBLE)
 );
 
 
-
-
-alter table ESTADO
-   add constraint FK_ESTADO_ESTADO_IN_INMUEBLE foreign key (IDINMUEBLE)
-      references INMUEBLE (IDINMUEBLE);
-
-
-
 create table DEPARTAMENTO (
    ID_DEPARTAMENTO      INTEGER               not null,
-   IDINMUEBLE           INTEGER,
    DEPARTAMENTO         VARCHAR2(50),
    constraint PK_DEPARTAMENTO primary key (ID_DEPARTAMENTO)
 );
-
-
-alter table DEPARTAMENTO
-   add constraint FK_DEPARTAM_RELATIONS_INMUEBLE foreign key (IDINMUEBLE)
-      references INMUEBLE (IDINMUEBLE);
 
 
 

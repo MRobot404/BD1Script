@@ -8,3 +8,8 @@ select * from inmueble;
 select * from correo;
 select * from telefono;
 select * from empleado;
+select * from tipo_documento;
+select * from documento_persona;
+select * from estado;
+select * from categorias;
+select * from departamento;
