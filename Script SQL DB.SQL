@@ -266,14 +266,12 @@ create table INMUEBLE (
    IDINMUEBLE           INTEGER               not null,
    IDESTADO_INMUEBLE    INTEGER,
    IDCATEGORIA          INTEGER,
-   CAT_IDCATEGORIA      INTEGER,
-   EST_IDESTADO_INMUEBLE INTEGER,
    ID_DEPARTAMENTO      INTEGER,
-   NOMBRE_INMUEBLE      VARCHAR2(50)          not null,
-   DESCRIPCION          VARCHAR2(50),
+   NOMBRE_INMUEBLE      VARCHAR2(500)          not null,
+   DESCRIPCION          VARCHAR2(500),
    CAPACIDAD            NUMBER,
-   DIRECCION            VARCHAR2(50),
-   URL_IMAGEN           VARCHAR2(100),
+   DIRECCION            VARCHAR2(500),
+   URL_IMAGEN           VARCHAR2(500),
    constraint PK_INMUEBLE primary key (IDINMUEBLE)
 );
 
@@ -283,17 +281,11 @@ alter table INMUEBLE
    add constraint FK_INMUEBLE_CATEGORIA_CATEGORI foreign key (IDCATEGORIA)
       references CATEGORIAS (IDCATEGORIA);
 
-alter table INMUEBLE
-   add constraint FK_INMUEBLE_ESTADO_IN_ESTADO foreign key (EST_IDESTADO_INMUEBLE)
-      references ESTADO (IDESTADO_INMUEBLE);
 
 alter table INMUEBLE
    add constraint FK_INMUEBLE_INMUEBLE__ESTADO foreign key (IDESTADO_INMUEBLE)
       references ESTADO (IDESTADO_INMUEBLE);
 
-alter table INMUEBLE
-   add constraint FK_INMUEBLE_RELATIONS_CATEGORI foreign key (CAT_IDCATEGORIA)
-      references CATEGORIAS (IDCATEGORIA);
 
 alter table INMUEBLE
     add constraint FK__INMUEBLE_DEPARTAMENTO foreign key (ID_DEPARTAMENTO)

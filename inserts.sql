@@ -21,7 +21,9 @@ insert into municipio(id_departamento,municipio) values (1,'Guatemala');
 insert into municipio(id_departamento,municipio) values (1,'Villa Nueva');
 insert into zona (zona) values ('zona 12');
 insert into zona (id_municipio,zona) values (2,'zona 3');
+insert into zona (id_municipio,zona) values (1,'zona 10');
 insert into aldeas_caserio(id_municipio,aldea_caserio) values (2,'Barcenas');
 insert into colonia (id_zona,nom_colonias) values (1,'Reformita');
 insert into zona_geografica(id_municipio,id_aldea) values (2,1);
 insert into zona_geografica(id_municipio,id_colonias) values (1,1);
+insert into inmueble(idestado_inmueble,idcategoria,id_departamento,nombre_inmueble,descripcion,capacidad,direccion,url_imagen

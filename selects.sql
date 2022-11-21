@@ -19,3 +19,8 @@ select * from aldeas_caserio;
 select * from zona_geografica;
 select * from colonia;
 select * from inmueble;
+select * from reserva_pago;
+select * from reserva;
+select * from renta;
+select * from pago;
+select * from renta_pago;
