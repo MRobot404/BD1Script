@@ -26,4 +26,5 @@ insert into aldeas_caserio(id_municipio,aldea_caserio) values (2,'Barcenas');
 insert into colonia (id_zona,nom_colonias) values (1,'Reformita');
 insert into zona_geografica(id_municipio,id_aldea) values (2,1);
 insert into zona_geografica(id_municipio,id_colonias) values (1,1);
-insert into inmueble(idestado_inmueble,idcategoria,id_departamento,nombre_inmueble,descripcion,capacidad,direccion,url_imagen
+insert into inmueble(idestado_inmueble,idcategoria,id_departamento,nombre_inmueble,descripcion,capacidad,direccion,url_imagen) values (1,1,1,'Apartamento zona 10','Apartamento ubicado en segundo nivel, privilegiado con amplio Jardín, pérgola eléctrica, excelente iluminación y ventilación, habitación Master con tv',4,'Zona 10, Guatemala, Ciudad Guatemala, Guatemala','https://http2.mlstatic.com/D_NQ_NP_2X_945833-MGT52419975509_112022-F.webp');
+insert into renta(idcliente,idestado_inmueble,idinmueble,fecha_renta,tiempo_renta_reserva,valor) values (1,1,1,'20/11/2022','30/11/2022',100);
