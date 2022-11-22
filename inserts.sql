@@ -1,5 +1,5 @@
 insert into persona (nombre,apellido,fecha_nacimiento) values ('Alejandra','Juarez','02/03/2022');
-insert into menu (Opcion_menu) values ('login');
+insert into menu (Opcionmenu) values ('login');
 insert into tipo_usuario (tipo_usuario) values('Administrador');
 insert into rol (nombre_rol) values ('Empleado');
 insert into rol_tipo_usuario (id_rol,id_tipo_usuario) values(6,16);
@@ -28,3 +28,4 @@ insert into zona_geografica(id_municipio,id_aldea) values (2,1);
 insert into zona_geografica(id_municipio,id_colonias) values (1,1);
 insert into inmueble(idestado_inmueble,idcategoria,id_departamento,nombre_inmueble,descripcion,capacidad,direccion,url_imagen) values (1,1,1,'Apartamento zona 10','Apartamento ubicado en segundo nivel, privilegiado con amplio Jardín, pérgola eléctrica, excelente iluminación y ventilación, habitación Master con tv',4,'Zona 10, Guatemala, Ciudad Guatemala, Guatemala','https://http2.mlstatic.com/D_NQ_NP_2X_945833-MGT52419975509_112022-F.webp');
 insert into renta(idcliente,idestado_inmueble,idinmueble,fecha_renta,tiempo_renta_reserva,valor) values (1,1,1,'20/11/2022','30/11/2022',100);
+insert into reserva(idestado_inmueble,idinmueble,idcliente,fecha_,tiempo_reserva) values (1,1,1,'15/11/2022','30/11/2022');

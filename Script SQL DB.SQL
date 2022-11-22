@@ -134,9 +134,9 @@ create table ROL (
 );
 
 create table MENU (
-   ID_MENU              INTEGER               not null,
-   OPCION_MENU          VARCHAR2(30),
-   constraint PK_MENU primary key (ID_MENU)
+   IDMENU              INTEGER               not null,
+   OPCIONMENU          VARCHAR2(30),
+   constraint PK_MENU primary key (IDMENU)
 );
 
 create table CLIENTE (

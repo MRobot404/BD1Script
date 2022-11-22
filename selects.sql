@@ -1,5 +1,5 @@
 select * from persona;
-select * from menu;
+select * from menu;     
 select * from tipo_usuario;
 select * from rol_tipo_usuario;
 select * from rol;
