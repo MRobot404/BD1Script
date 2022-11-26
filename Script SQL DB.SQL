@@ -1,4 +1,11 @@
-
+create table TBL_BITACORA (
+   ID_TRANSACCION       INTEGER               not null,
+   BIT_TABLA_PRINCIPAL  VARCHAR2(50)          not null,
+   TRN_USUARIO          VARCHAR2(50)          not null,
+   TRN_FECHA_HORA       DATE                  not null,
+   TRN_LOG              VARCHAR2(4000)        not null,
+   constraint PK_TBL_BITACORA primary key (ID_TRANSACCION)
+);
 create table CORREO (
    IDCORREO             INTEGER               not null,
    IDPERSONA            INTEGER,

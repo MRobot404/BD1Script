@@ -146,3 +146,38 @@ BEFORE INSERT ON MENU REFERENCING NEW AS NEW OLD AS OLD FOR EACH ROW
 BEGIN
     SELECT TEST_SEQ9.NEXTVAL INTO :New.IDMENU  FROM DUAL;
 END;
+
+CREATE OR REPLACE TRIGGER VALIDARPRECIO 
+BEFORE INSERT ON RENTA 
+FOR EACH ROW
+DECLARE
+BEGIN
+	IF :NEW.VALOR < 0 THEN
+	   :NEW.VALOR := 0;
+	END IF;
+END;
+
+
+
+
+CREATE OR REPLACE TRIGGER TR_HORARIO BEFORE INSERT ON CLIENTE
+
+BEGIN 
+	IF (TO_CHAR(SYSDATE, 'DY') IN ('SAT', 'SUN'))
+	OR (TO_CHAR(SYSDATE, 'HH24:MI') NOT BETWEEN '07:00' AND '18:00')
+	THEN RAISE_APPLICATION_ERROR(-20500, 'NO SE ENCUENTRA EN HORARIO OPERATIVO, FAVOR DE CONTACTAR A SOPORTE DB');
+	END IF;
+END;
+
+Verificar los precios para que pueda redondear y que no sean menores a 0.
+
+create or replace trigger tr_revisar_precio_renta
+ before update of valor
+ on renta
+ for each row
+ begin
+  if (:new.valor<0) then
+   :new.valor:=floor(:new.valor);
+   then RAISE_APPLICATION_ERROR('El valor no puede ser menor a 0');
+  end if;
+ end tr_actualizar_precio_renta;
